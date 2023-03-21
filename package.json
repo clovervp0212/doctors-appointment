@@ -18,7 +18,7 @@
     "messenger",
     "bot"
   ],
-  "author": "Hary Pham",
+  "author": "Huy Nguyen",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -32,10 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haryphamdev/doctors-appointment-booking-system.git"
+    "url": "git+https://github.com/clovervp0212/doctors-appointment.git"
   },
-  "bugs": {
-    "url": "https://github.com/haryphamdev/doctors-appointment-booking-system/issues"
-  },
-  "homepage": "https://github.com/haryphamdev/doctors-appointment-booking-system#readme"
 }
