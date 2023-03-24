@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
@@ -10,278 +11,321 @@
     <!-- Load Jquery, Slick slider-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/js/slick-slide.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
+<style>
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+<script>
+    $(document).mouseup(function (e) {
+        var container = $(".for-users");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+        }
+    });
+    $(document).ready(function (e) {
+        $("#logoIcon").on("click", function (e) {
+            $(".for-users").css("display", "flex");
+            // $(".for-users").addClass("display", "flex");
+        });
+    })
+
+</script>
+
 <body>
-<div class="container">
-    <section class="header">
-        <div class="top-nav">
-            <div class="logo">
-                <i class="fas fa-bars"></i>
-                <img src="/images/logo-website.png" alt="logo-website">
-            </div>
-            <div class="intro">
-                <div class="intro-icon">
-                    <h3 class="title">Specialist</h3>
-                    <span>Find a doctor by specialty</span>
-                </div>
-                <div class="intro-icon">
-                    <h3 class="title">Health facilities</h3>
-                    <span>Select clinic</span>
-                </div>
-                <div class="intro-icon">
-                    <h3 class="title">Doctor</h3>
-                    <span>Choose a good doctor</span>
-                </div>
-                <div class="intro-icon">
-                    <h3 class="title">Exam package</h3>
-                    <span>General health check</span>
-                </div>
 
-            </div>
-            <div class="support">
-                <span><i class="fas fa-question-circle"></i>Support</span>
-            </div>
-        </div>
+    <div class="container">
+        <section class="header">
+            <div class="top-nav">
+                <div class="logo">
+                    <i class="fas fa-bars logo-icon" id="logoIcon"></i>
+                    <img src="/images/logo-website.png" alt="logo-website">
+                    <div class="for-users">
+                        <a href="/login">Login</a>
+                        <a href="/users">Admin Page</a>
+                    </div>
+                </div>
+                <div class="intro">
+                    <div class="intro-icon">
+                        <h3 class="title">Specialist</h3>
+                        <span>Find a doctor by specialty</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Health facilities</h3>
+                        <span>Select clinic</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Doctor</h3>
+                        <span>Choose a good doctor</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Exam package</h3>
+                        <span>General health check</span>
+                    </div>
 
-        <div class="image-nav">
-            <div class="title-image">
-                SPECIALIST MEDICAL EXAMINATION PLATFORM
-            </div>
-            <div class="btn-search">
-                <i class="fas fa-search"></i>
-                <input class="input-search" type="text" name="btnSearch" placeholder="Search here...">
-            </div>
-        </div>
-        <div class="bottom-nav">
-            <div class="bottom-item">
-                <i class="fas fa-check"></i>
-                <span>Big hospital</span>
-            </div>
-            <div class="bottom-item">
-                <i class="far fa-thumbs-up"></i>
-                <span>Good clinic</span>
-            </div>
-            <div class="bottom-item">
-                <i class="fas fa-user-nurse"></i>
-                <span>Good doctor</span>
-            </div>
-            <div class="bottom-item">
-                <i class="far fa-clock"></i>
-                <span>Priority examination</span>
-            </div>
-        </div>
-    </section>
-    <section class="popular-specialty">
-        <div class="title-section">
-            <span class="span-title">Popular specialty</span>
-            <div class="btn-view ">
-                <a class="" href="/"> <span>ALL SPECIALITY </span></a>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="my-slick-slide">
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>Heart</span>
-                    </div>
                 </div>
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>Nerve</span>
-                    </div>
+                <div class="support">
+                    <span><i class="fas fa-question-circle"></i>Support</span>
                 </div>
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>Digest</span>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <div class="image-slide">
+            </div>
 
-                    </div>
-                    <div class="div-title">
-                        <span>Traditional medicine</span>
-                    </div>
+            <div class="image-nav">
+                <div class="title-image">
+                    SPECIALIST MEDICAL EXAMINATION PLATFORM
                 </div>
-                <div class="div-slide">
-                    <div class="image-slide">
+                <div class="btn-search">
+                    <i class="fas fa-search"></i>
+                    <input class="input-search" type="text" name="btnSearch" placeholder="Search here...">
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <div class="bottom-item">
+                    <i class="fas fa-check"></i>
+                    <span>Big hospital</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="far fa-thumbs-up"></i>
+                    <span>Good clinic</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="fas fa-user-nurse"></i>
+                    <span>Good doctor</span>
+                </div>
+                <div class="bottom-item">
+                    <i class="far fa-clock"></i>
+                    <span>Priority examination</span>
+                </div>
+            </div>
+        </section>
+        <section class="popular-specialty">
+            <div class="title-section">
+                <span class="span-title">Popular specialty</span>
+                <div class="btn-view ">
+                    <a class="" href="/"> <span>ALL SPECIALITY </span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <img src="../images/speciality/tim-mach.jpg" alt="image-specialty">
 
-                    </div>
-                    <div class="div-title">
-                        <span>Acupuncture</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hospital-and-clinic">
-        <div class="title-section">
-            <span class="span-title">Top hospitals & clinics</span>
-            <div class="btn-view ">
-                <a class="" href="/"> <span>ALL MEDICAL FACILITIES </span></a>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="my-slick-slide">
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>K Hospital</span>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>D Hospital</span>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <div class="image-slide">
-                    </div>
-                    <div class="div-title">
-                        <span>ABC Clinic</span>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <div class="image-slide">
 
+                        <div class="div-title">
+                            <span>Cardiology</span>
+                        </div>
                     </div>
-                    <div class="div-title">
-                        <span>ABC Hospital</span>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <div class="image-slide">
+                    <div class="div-slide">
+                        <img src="../images/speciality/than-kinh.jpg" alt="image-specialty">
 
+
+                        <div class="div-title">
+                            <span>Neurology</span>
+                        </div>
                     </div>
-                    <div class="div-title">
-                        <span>d Hospital</span>
+                    <div class="div-slide">
+                        <img src="../images/speciality/tieu-hoa.jpg" alt="image-specialty">
+
+
+                        <div class="div-title">
+                            <span>Gastroenterology</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="doctors">
-        <div class="title-section">
-            <span class="span-title">Outstanding doctor</span>
-            <div class="btn-view ">
-                <a class="" href="/"> <span>ALL THE DOCTORS </span></a>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="my-slick-slide">
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image-doctors">
-                    <div class="info-doctor">
-                        <span class="name">Dr. Hary Pham</span>
-                        <span class="speciality">Nerve</span>
+                    <div class="div-slide">
+                        <img src="../images/speciality/y-hoc-co-truyen.jpg" alt="image-specialty">
+
+
+                        <div class="div-title">
+                            <span>Traditional medicine</span>
+                        </div>
                     </div>
-                    <span class="count-booking">1.000 bookings</span>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image-doctors">
-                    <div class="info-doctor">
-                        <span class="name">Dr. Hary Pham</span>
-                        <span class="speciality">Nerve</span>
-                    </div>
-                    <span class="count-booking">1.000 bookings</span>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image-doctors">
-                    <div class="info-doctor">
-                        <span class="name">Dr. Hary Pham</span>
-                        <span class="speciality">Nerve</span>
-                    </div>
-                    <span class="count-booking">1.000 bookings</span>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image-doctors">
-                    <div class="info-doctor">
-                        <span class="name">Dr. Hary Pham</span>
-                        <span class="speciality">Nerve</span>
-                    </div>
-                    <span class="count-booking">1.000 bookings</span>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image-doctors">
-                    <div class="info-doctor">
-                        <span class="name">Dr. Hary Pham</span>
-                        <span class="speciality">Nerve</span>
-                    </div>
-                    <span class="count-booking">1.000 bookings</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="handbook">
-        <div class="title-section">
-            <span class="span-title">Handbooks</span>
-            <div class="btn-view ">
-                <a class="" href="/"> <span>ALL POSTS</span></a>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="handbook-slide">
-                <div class="div-slide">
-                  <img src="../images/speciality/speciality1.jpg" alt="image the post">
-                    <div class="info-post">
-                        <span class="title-post">My first post</span>
-                        <div class="summary-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image the post">
-                    <div class="info-post">
-                        <span class="title-post">My first post</span>
-                        <div class="summary-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image the post">
-                    <div class="info-post">
-                        <span class="title-post">My first post</span>
-                        <div class="summary-content">asdfasdf asdfl asfd lkasdfasdfasfd</div>
-                    </div>
-                </div>
-                <div class="div-slide">
-                    <img src="../images/speciality/speciality1.jpg" alt="image the post">
-                    <div class="info-post">
-                        <span class="title-post">My first post</span>
-                        <div class="summary-content">asdfasdf asdfl asfd lkasdfasdfasfd</div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/tai-mui-hong.jpg" alt="image-specialty">
+
+                        <div class="div-title">
+                            <span>Otolaryngology</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="left-side">
-            <span class="title">For doctors</span>
-            <span class="second-title">Building credibility and online brand</span>
-            <span class="third-title">Increasing the number of patients and effective management</span>
-            <a class="btn-contact"><span>contact for cooperation</span></a>
-        </div>
-        <div class="right-side auto-resizable-iframe">
-            <div>
-                <iframe src="https://www.youtube.com/embed/25PzpAdndSs"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        </section>
+        <section class="hospital-and-clinic">
+            <div class="title-section">
+                <span class="span-title">Top hospitals & clinics</span>
+                <div class="btn-view ">
+                    <a class="" href="/"> <span>ALL MEDICAL FACILITIES </span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <img src="../images/speciality/bvk.jpg" alt="image-hospitals">
+                        <div class="div-title">
+                            <span>K Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bv-viet-duc.jpg" alt="image-hospitals">
+                        <div class="div-title">
+                            <span>Viet Duc Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/trung-tam-kham-suc-khoe-dinh-ky.jpg" alt="image-hospitals">
+                        <div class="div-title">
+                            <span>International Clinic</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bv-an-viet1.jpg" alt="image-hospitals">
+                        <div class="div-title">
+                            <span>An Viet Hospital</span>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/benh-vien-thu-cuc.jpg" alt="image-hospitals">
+                        <div class="div-title">
+                            <span>Thu Cuc Hospital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="doctors">
+            <div class="title-section">
+                <span class="span-title">Outstanding doctor</span>
+                <div class="btn-view ">
+                    <a class="" href="/"> <span>ALL THE DOCTORS </span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="my-slick-slide">
+                    <div class="div-slide">
+                        <img src="../images/speciality/bac-si.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Dr. Hary Pham</span>
+                            <span class="speciality">Neurology</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bac-si.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Dr. Huy Nguyen</span>
+                            <span class="speciality">Cardiology</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bac-si.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Dr. Eric Nguyen</span>
+                            <span class="speciality">Otolaryngology</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bac-si.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Dr. Herry Nguyen</span>
+                            <span class="speciality">Gastroenterology</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/bac-si.jpg" alt="image-doctors">
+                        <div class="info-doctor">
+                            <span class="name">Dr. Tuan Tran</span>
+                            <span class="speciality">Traditional medicine</span>
+                        </div>
+                        <span class="count-booking">1.000 bookings</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="handbook">
+            <div class="title-section">
+                <span class="span-title">Handbooks</span>
+                <div class="btn-view ">
+                    <a class="" href="/"> <span>ALL POSTS</span></a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="handbook-slide">
+                    <div class="div-slide">
+                        <img src="../images/speciality/handbook.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post"> Eat fatty fish</span>
+                            <div class="summary-content">
+
+                                Studies show that people who eat fish regularly have a lower risk for several
+                                conditions, including heart disease, dementia, and inflammatory bowel disease
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/handbook.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">Get enough sleep</span>
+                            <div class="summary-content">
+
+                                The importance of getting enough quality sleep cannot be overstated.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/handbook.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">Feed your gut bacteria</span>
+                            <div class="summary-content">
+                                The bacteria in your gut, collectively called the gut microbiota, are incredibly
+                                important for overall health.</div>
+                        </div>
+                    </div>
+                    <div class="div-slide">
+                        <img src="../images/speciality/handbook.jpg" alt="image the post">
+                        <div class="info-post">
+                            <span class="title-post">Limit sugary drinks</span>
+                            <div class="summary-content">
+                                Sugary drinks like sodas, fruit juices, and sweetened teas are the primary source of
+                                added sugar in the American diet.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="left-side">
+                <span class="title">For doctors</span>
+                <span class="second-title">Building credibility and online brand</span>
+                <span class="third-title">Increasing the number of patients and effective management</span>
+                <a class="btn-contact"><span>contact for cooperation</span></a>
+            </div>
+            <div class="right-side auto-resizable-iframe">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/nOh7h67IxJs"
+                        title="Hướng Dẫn Đặt Lịch Khám Qua BookingCare" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
-                </iframe>
+                    </iframe>
+                </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <span> HaryPhamDev</span>
-    </footer>
-</div>
+        </section>
+        <footer>
+            <span> Huy Nguyen</span>
+        </footer>
+    </div>
 </body>
+
 </html>
