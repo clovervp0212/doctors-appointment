@@ -34,7 +34,7 @@ app.use(passport.session());
 //init all web routes
 initWebRoutes(app);
 
-let port = process.env.PORT || 8080;
+let port = process.env.PORT;
 
 app.listen(port, () => {
    console.log(`App is running at the port ${port}`);

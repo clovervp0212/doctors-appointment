@@ -5,7 +5,6 @@ import initPassportLocal from "../controllers/passport/passportLocal";
 import passport from "passport";
 import authController from "../controllers/authController";
 import userController from "../controllers/userController";
-import chatFacebookController from "../controllers/chatFacebookController"
 /*
 init all web routes
  */
