@@ -5,6 +5,7 @@ import initPassportLocal from "../controllers/passport/passportLocal";
 import passport from "passport";
 import authController from "../controllers/authController";
 import userController from "../controllers/userController";
+import chatFacebookController from "../controllers/chatFacebookController"
 /*
 init all web routes
  */
@@ -19,6 +20,7 @@ let initAllWebRoutes = (app) => {
     router.get("/users", authController.checkLoggedIn, homepageController.getAdminPage);
     router.get("/all-users", authController.checkLoggedIn, homepageController.getAllUsersPage);
     router.get("/create-user", userController.getCreateUserPage);
+
 
     router.post("/register", auth.validateRegister, homepageController.handleRegister);
     router.post("/login", passport.authenticate("local", {
